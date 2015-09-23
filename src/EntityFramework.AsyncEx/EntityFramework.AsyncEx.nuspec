@@ -2,14 +2,14 @@
 <package >
   <metadata>
     <id>EntityFramework.AsyncEx</id>
-    <version>1.0.0</version>
+    <title>EntityFramework Async Extensions</title>
+    <version>$version$</version>
     <authors>Renato Golia</authors>
     <owners>Renato Golia</owners>
     <licenseUrl>https://github.com/Kralizek/EntityFramework.AsyncEx/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/Kralizek/EntityFramework.AsyncEx</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Package description</description>
-    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <description>Helper tools to improve testability of Entity Framework-based code using async calls</description>
     <copyright>Copyright 2015</copyright>
     <tags>EntityFramework async await</tags>
     <dependencies>
