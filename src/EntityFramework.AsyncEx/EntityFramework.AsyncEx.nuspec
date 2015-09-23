@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>EntityFramework.AsyncEx</id>
+    <version>1.0.0</version>
+    <authors>Renato Golia</authors>
+    <owners>Renato Golia</owners>
+    <licenseUrl>https://github.com/Kralizek/EntityFramework.AsyncEx/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Kralizek/EntityFramework.AsyncEx</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package description</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright 2015</copyright>
+    <tags>EntityFramework async await</tags>
+    <dependencies>
+      <dependency id="EntityFramework" version="6.0" />
+    </dependencies>
+  </metadata>
+</package>
