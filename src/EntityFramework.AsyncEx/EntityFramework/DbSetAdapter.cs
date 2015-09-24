@@ -49,6 +49,8 @@ namespace Kralizek.EntityFramework
         public ObservableCollection<T> Local => _innerDbSet.Local;
 
         public IQueryProvider Provider => ((IQueryable<T>)_innerDbSet).Provider;
+
+        public IDbSet<T> Inner => _innerDbSet;
     }
 
 }
