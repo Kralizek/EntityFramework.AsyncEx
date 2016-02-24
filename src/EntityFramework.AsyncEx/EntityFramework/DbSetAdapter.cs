@@ -3,13 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace Kralizek.EntityFramework
 {
-    public sealed class DbSetAdapter<T> : IAsyncDbSet<T>
+    public sealed class DbSetAdapter<T> : IAsyncDbSet<T>, IDbAsyncEnumerable<T>
         where T : class
     {
         private readonly DbSet<T> _innerDbSet;
@@ -51,6 +52,10 @@ namespace Kralizek.EntityFramework
         public IQueryProvider Provider => ((IQueryable<T>)_innerDbSet).Provider;
 
         public IDbSet<T> Inner => _innerDbSet;
+
+	    public IDbAsyncEnumerator GetAsyncEnumerator() => ((IDbAsyncEnumerable)_innerDbSet).GetAsyncEnumerator();
+
+        IDbAsyncEnumerator<T> IDbAsyncEnumerable<T>.GetAsyncEnumerator() => ((IDbAsyncEnumerable<T>)_innerDbSet).GetAsyncEnumerator();
     }
 
 }

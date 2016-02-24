@@ -10,6 +10,7 @@ using Moq;
 using NUnit.Framework;
 using Ploeh.AutoFixture;
 using TestBase;
+using System.Data.Entity.Infrastructure;
 
 namespace Tests.EntityFramework
 {
@@ -132,6 +133,16 @@ namespace Tests.EntityFramework
             ((IEnumerable)sut).GetEnumerator();
 
             mockDbSet.As<IEnumerable<TestEntity>>().Verify(p => p.GetEnumerator(), Times.Once);
+        }
+
+        [Test]
+        public void GetAsyncEnumerator_forwards_to_inner_DbSet()
+        {
+            var sut = CreateSystemUnderTest();
+
+            ((IDbAsyncEnumerable<TestEntity>)sut).GetAsyncEnumerator();
+
+            mockDbSet.As<IDbAsyncEnumerable<TestEntity>>().Verify(p => p.GetAsyncEnumerator(), Times.Once);
         }
 
         [Test]
