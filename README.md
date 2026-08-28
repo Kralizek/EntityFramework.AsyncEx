@@ -1,3 +1,4 @@
-# EntityFramework.AsyncEx
+> [!WARNING]
+> This project is no longer maintained. Existing NuGet packages remain available for existing consumers, but no new releases are planned. The package targets the Entity Framework 6 / .NET Framework era; prefer the async APIs built into EF6 or modern EF Core as appropriate. This repository is being archived and kept read-only.
 
-[![Build status](https://ci.appveyor.com/api/projects/status/rjbys2fb48nsxlr5?svg=true)](https://ci.appveyor.com/project/Kralizek/entityframework-asyncex)
+# EntityFramework.AsyncEx
